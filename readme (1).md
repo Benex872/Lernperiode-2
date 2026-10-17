@@ -10,7 +10,7 @@
 ## 16.10.2026
 
 - [x] Ein Random Zahlen Guesser der bei jedem Durchgang eine neue Random Zahl erstellt.
-- [ ] Ein Programm das den Benutzen danach fragt wie gross der Zahlen Guesser sein soll Bsp. 1-10,1-100 
+- [x] Ein Programm das den Benutzen danach fragt wie gross der Zahlen Guesser sein soll Bsp. 1-10,1-100 
 
 
 Heute habe ich ein Random Zahlen Guesser programmiert das wenn der Benutzer keinen int wert eingibt es nicht abstürzt und ihn darauf hinweist dass seine Eingabe ungültig war und ihn darum bittet eine Zahl einzugeben. Das wird so lang wiederholt bis er einen Gültigen Wert eingibt.
