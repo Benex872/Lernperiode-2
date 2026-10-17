@@ -1,0 +1,45 @@
+﻿Console.WriteLine("=======Zahlen-Guesser=======");
+Console.WriteLine("Sie können das Spiel variieren, indem Sie entscheiden, von wo bis wo es gehen soll.");
+Console.WriteLine("Ihnen stehen zur Verfügung: 1-10, 1-100, 1-1000");
+Console.WriteLine("Bitte wählen Sie eine Option aus:");
+Console.WriteLine("1. 1-10");
+Console.WriteLine("2. 1-100");
+Console.WriteLine("3. 1-1000");
+
+int antwort;
+int max = 0;
+
+do
+{
+    while (!int.TryParse(Console.ReadLine(), out antwort))
+    {
+        Console.WriteLine("Bitte geben Sie eine gültige Zahl ein.");
+    }
+
+    if (antwort == 1) max = 10;
+    else if (antwort == 2) max = 100;
+    else if (antwort == 3) max = 1000;
+    else Console.WriteLine("Ungültige Eingabe. Bitte wählen Sie 1, 2 oder 3.");
+} while (antwort < 1 || antwort > 3);
+
+Console.WriteLine($"Sie haben sich für 1-{max} entschieden.");
+
+int geheimzahl = new Random().Next(1, max + 1);
+int tipp;
+int versuche = 0;
+
+do
+{
+    Console.Write("Ihr Tipp: ");
+    while (!int.TryParse(Console.ReadLine(), out tipp))
+    {
+        Console.WriteLine("Bitte geben Sie eine gültige Zahl ein.");
+    }
+
+    versuche++;
+
+    if (tipp < geheimzahl) Console.WriteLine("Zu niedrig!");
+    else if (tipp > geheimzahl) Console.WriteLine("Zu hoch!");
+} while (tipp != geheimzahl);
+
+Console.WriteLine($"Richtig! Sie haben {versuche} Versuche gebraucht.");
