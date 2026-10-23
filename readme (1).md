@@ -23,3 +23,6 @@ Heute habe ich an der Mathe hilfer weiter gearbeitet aber es leider nicht fertig
 
 ## 30.10.2026
 - [ ] EIn Programm das 2 Moduse hat Programmieren in dem man zwischen den Zahlen Guesser und einen true oder false Quiz entscheiden kann.
+- [ ] Ein Durchschnitt Programm Programmieren in dem man die möglichkeit hat alle Noten zu schreiben und das Programm berechnet dein Durchschnitt.
+- [ ] Den Durchschnitt berechner Programm verbessern damit man sogar für alle fächer auch die Durschnitte Berechnen kann.
+- [ ] Ein Mathe Rechner Programm Programmieren der Addition Subtraktion Multiplikation und Division kann. 
