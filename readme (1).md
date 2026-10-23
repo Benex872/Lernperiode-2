@@ -17,4 +17,9 @@ Heute habe ich ein Random Zahlen Guesser programmiert das wenn der Benutzer kein
 
 ## 23.10.2026
 - [ ] Ein Mathe hilfer programmieren dass den Benutzer hilft bei einem Mathe Problem in dem der Benutzer schreibt wie er es rechnet und das Programm ihn darauf hinweist dass er Fehler macht falls er diese auch machen würde.
-- [ ] 
+- [ ] EInen Taschenrechner Programmieren der Addieren Subtrahieren Multiplizieren und auch Dividieren kann.
+
+Heute habe ich an der Mathe hilfer weiter gearbeitet aber es leider nicht fertig geschafft da es meine jetzigen Programmier skills überschreitet ich will jedoch dieses Programm noch in dieser Lernperiode programmieren.
+
+## 30.10.2026
+- [ ] EIn Programm das 2 Moduse hat Programmieren in dem man zwischen den Zahlen Guesser und einen true oder false Quiz entscheiden kann.
