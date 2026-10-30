@@ -1,0 +1,53 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Globalization;
+
+List<double> noten = new List<double>();
+
+Console.WriteLine("Gib deine Noten ein (1 bis 6).");
+Console.WriteLine("Schreibe 'fertig', wenn du alle Noten eingegeben hast.");
+
+while (true)
+{
+    Console.Write("Note: ");
+    string? eingabe = Console.ReadLine()?.Trim();
+
+    if (eingabe?.ToLower() == "fertig")
+        break;
+
+    if (double.TryParse(eingabe, NumberStyles.Float,
+            CultureInfo.CurrentCulture, out double note) ||
+        double.TryParse(eingabe?.Replace(',', '.'),
+            NumberStyles.Float, CultureInfo.InvariantCulture, out note))
+    {
+        if (note >= 1 && note <= 6)
+        {
+            noten.Add(note);
+        }
+        else
+        {
+            Console.WriteLine("Die Note muss zwischen 1 und 6 liegen.");
+        }
+    }
+    else
+    {
+        Console.WriteLine("Bitte gib eine gültige Note oder 'fertig' ein.");
+    }
+}
+
+if (noten.Count == 0)
+{
+    Console.WriteLine("Es wurden keine Noten eingegeben.");
+}
+else
+{
+    double durchschnitt = 0;
+
+    foreach (double note in noten)
+        durchschnitt += note;
+
+    durchschnitt /= noten.Count;
+
+    Console.WriteLine($"Anzahl der Noten: {noten.Count}");
+    Console.WriteLine($"Dein Notendurchschnitt ist: {durchschnitt:F2}");
+}
