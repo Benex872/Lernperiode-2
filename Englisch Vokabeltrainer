@@ -1,0 +1,33 @@
+﻿using System;
+
+string[,] vokabeln =
+{
+    { "apple", "Apfel" },
+    { "book", "Buch" },
+    { "house", "Haus" },
+    { "school", "Schule" },
+    { "water", "Wasser" }
+};
+
+int richtig = 0;
+
+Console.WriteLine("Englisch-Vokabeltrainer");
+Console.WriteLine("Übersetze die englischen Wörter ins Deutsche.\n");
+
+for (int i = 0; i < vokabeln.GetLength(0); i++)
+{
+    Console.Write($"{vokabeln[i, 0]} = ");
+    string antwort = Console.ReadLine() ?? "";
+
+    if (antwort.Trim().Equals(vokabeln[i, 1], StringComparison.CurrentCultureIgnoreCase))
+    {
+        Console.WriteLine("Richtig!\n");
+        richtig++;
+    }
+    else
+    {
+        Console.WriteLine($"Leider falsch. Richtig ist: {vokabeln[i, 1]}\n");
+    }
+}
+
+Console.WriteLine($"Ergebnis: {richtig} von {vokabeln.GetLength(0)} richtig.");
