@@ -1,0 +1,15 @@
+using System;
+using System.Linq;
+
+Console.WriteLine("Früchte eingeben, durch Kommas getrennt:");
+string eingabe = Console.ReadLine() ?? "";
+
+var fruechte = eingabe
+    .Split(',', StringSplitOptions.RemoveEmptyEntries | StringSplitOptions.TrimEntries)
+    .OrderBy(frucht => frucht, StringComparer.CurrentCultureIgnoreCase);
+
+Console.WriteLine("\nAlphabetisch sortierte Früchte:");
+foreach (string frucht in fruechte)
+{
+    Console.WriteLine(frucht);
+}
