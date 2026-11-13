@@ -34,10 +34,10 @@ Heute habe ich an der Mathe hilfer weiter gearbeitet aber es leider nicht fertig
 - [x] Einen Alphabetischen Zuordner der die Namen die der Benutzter eingegeben hat Alphabetisch Zuordnet.
 
 ## 13.11.2026
-- [ ] Meinen Alphabetischen Zuordner verbessern damit er nicht bei ungültigen Eingaben abstürzt.
-- [ ] Meinen Englich vocy Trainer verbessern damit er nicht bei ungültigen Eingaben abstürzt.
-- [ ] Meinen Franz Vocy Trainer verbessern damit er nicht bei ungültigen Eingaben abstürzt.
+- [x] Meinen Alphabetischen Zuordner verbessern damit er nicht bei ungültigen Eingaben abstürzt.
+- [x] Meinen English vocy Trainer verbessern damit er nicht bei ungültigen Eingaben abstürzt.
+- [x] Meinen Franz Vocy Trainer verbessern damit er nicht bei ungültigen Eingaben abstürzt.
 - [ ] Einen Programm schreiben das sowie ein Egnlish-Vocy trainer als auch ein Mathe Helfer sein kann.
 - [ ] Einen Programm schreiben das sowie ein Franz-Vocy Trainer als auch ein Mathe Helfer sein  kann.
 
- 
+Heute habe ich meinen Alphabetischen Zuordner so verbessert das er nicht direkt abstürzt bei ungültigen Eingaben das Gleiche habe ich auch bei meinem English vocy und auch bei meinem Franz-vocy trainer diese werden ab jetzt nicht bei ungültigen eingaben abstürzten.
