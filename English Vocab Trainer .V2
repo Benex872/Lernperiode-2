@@ -1,0 +1,58 @@
+
+using System;
+using System.Collections.Generic;
+
+class Program
+{
+    static void Main()
+    {
+        Dictionary<string, string> woerter = new Dictionary<string, string>()
+        {
+            {"apple", "Apfel"},
+            {"house", "Haus"},
+            {"book", "Buch"},
+            {"school", "Schule"},
+            {"water", "Wasser"},
+            {"friend", "Freund"},
+            {"beautiful", "schön"},
+            {"learn", "lernen"},
+            {"window", "Fenster"},
+            {"quickly", "schnell"}
+        };
+
+        Random random = new Random();
+        int punkte = 0;
+
+        Console.WriteLine("=== ENGLISH VOCAB TRAINER ===");
+        Console.WriteLine("Übersetze die englischen Wörter ins Deutsche.\n");
+
+        var fragen = new List<string>(woerter.Keys);
+
+        for (int i = fragen.Count - 1; i > 0; i--)
+        {
+            int j = random.Next(i + 1);
+            (fragen[i], fragen[j]) = (fragen[j], fragen[i]);
+        }
+
+        foreach (string englisch in fragen)
+        {
+            Console.Write(englisch + " = ");
+            string antwort = (Console.ReadLine() ?? "").Trim();
+
+            if (antwort.Equals(woerter[englisch],
+                StringComparison.OrdinalIgnoreCase))
+            {
+                Console.WriteLine("Richtig!\n");
+                punkte++;
+            }
+            else
+            {
+                Console.WriteLine("Falsch! Richtig wäre: "
+                    + woerter[englisch] + "\n");
+            }
+        }
+
+        Console.WriteLine("=== ERGEBNIS ===");
+        Console.WriteLine("Punkte: " + punkte + "/" + fragen.Count);
+    }
+}
