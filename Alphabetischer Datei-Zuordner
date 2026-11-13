@@ -1,0 +1,72 @@
+
+using System;
+using System.IO;
+
+class Program
+{
+    static void Main()
+    {
+        Console.WriteLine("=== ALPHABETISCHER ZUORDNER ===");
+
+        Console.Write("Quellordner: ");
+        string quelle = Console.ReadLine() ?? "";
+
+        Console.Write("Zielordner: ");
+        string ziel = Console.ReadLine() ?? "";
+
+        if (!Directory.Exists(quelle))
+        {
+            Console.WriteLine("Fehler: Quellordner existiert nicht!");
+            return;
+        }
+
+        try
+        {
+            Directory.CreateDirectory(ziel);
+
+            int kopiert = 0;
+            int uebersprungen = 0;
+
+            foreach (string datei in Directory.GetFiles(quelle))
+            {
+                string name = Path.GetFileName(datei);
+                string ersterBuchstabe =
+                    Path.GetFileNameWithoutExtension(datei)
+                    .Substring(0, 1).ToUpper();
+
+                if (string.IsNullOrEmpty(ersterBuchstabe))
+                    ersterBuchstabe = "#";
+
+                if (ersterBuchstabe.Length != 1 ||
+                    ersterBuchstabe[0] < 'A' ||
+                    ersterBuchstabe[0] > 'Z')
+                    ersterBuchstabe = "#";
+
+                string unterordner =
+                    Path.Combine(ziel, ersterBuchstabe);
+
+                Directory.CreateDirectory(unterordner);
+
+                string zielDatei =
+                    Path.Combine(unterordner, name);
+
+                if (File.Exists(zielDatei))
+                {
+                    uebersprungen++;
+                    continue;
+                }
+
+                File.Copy(datei, zielDatei);
+                kopiert++;
+            }
+
+            Console.WriteLine("\nFertig!");
+            Console.WriteLine("Kopierte Dateien: " + kopiert);
+            Console.WriteLine("Übersprungen: " + uebersprungen);
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine("Fehler: " + ex.Message);
+        }
+    }
+}
