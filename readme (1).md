@@ -37,7 +37,7 @@ Heute habe ich an der Mathe hilfer weiter gearbeitet aber es leider nicht fertig
 - [ ] Meinen Alphabetischen Zuordner verbessern damit er nicht bei ungültigen Eingaben abstürzt.
 - [ ] Meinen Englich vocy Trainer verbessern damit er nicht bei ungültigen Eingaben abstürzt.
 - [ ] Meinen Franz Vocy Trainer verbessern damit er nicht bei ungültigen Eingaben abstürzt.
-- [ ] 
-- [ ]
+- [ ] Einen Programm schreiben das sowie ein Egnlish-Vocy trainer als auch ein Mathe Helfer sein kann.
+- [ ] Einen Programm schreiben das sowie ein Franz-Vocy Trainer als auch ein Mathe Helfer sein  kann.
 
  
