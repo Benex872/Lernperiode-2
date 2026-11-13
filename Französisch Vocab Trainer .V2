@@ -1,0 +1,59 @@
+
+using System;
+using System.Collections.Generic;
+
+class Program
+{
+    static void Main()
+    {
+        Dictionary<string, string> woerter = new Dictionary<string, string>()
+        {
+            {"bonjour", "Guten Tag"},
+            {"merci", "Danke"},
+            {"maison", "Haus"},
+            {"livre", "Buch"},
+            {"école", "Schule"},
+            {"eau", "Wasser"},
+            {"ami", "Freund"},
+            {"chat", "Katze"},
+            {"chien", "Hund"},
+            {"rouge", "rot"}
+        };
+
+        Random random = new Random();
+        int punkte = 0;
+
+        Console.WriteLine("=== FRANZÖSISCH VOCAB TRAINER ===");
+        Console.WriteLine("Übersetze die französischen Wörter ins Deutsche.\n");
+
+        var fragen = new List<string>(woerter.Keys);
+
+        for (int i = fragen.Count - 1; i > 0; i--)
+        {
+            int j = random.Next(i + 1);
+            (fragen[i], fragen[j]) = (fragen[j], fragen[i]);
+        }
+
+        foreach (string franzoesisch in fragen)
+        {
+            Console.Write(franzoesisch + " = ");
+            string antwort = (Console.ReadLine() ?? "").Trim();
+
+            if (antwort.Equals(woerter[franzoesisch],
+                StringComparison.OrdinalIgnoreCase))
+            {
+                Console.WriteLine("Richtig!\n");
+                punkte++;
+            }
+            else
+            {
+                Console.WriteLine("Falsch! Richtig wäre: "
+                    + woerter[franzoesisch] + "\n");
+            }
+        }
+
+        Console.WriteLine("=== ERGEBNIS ===");
+        Console.WriteLine("Punkte: " + punkte + "/" + fragen.Count);
+    }
+}
+
