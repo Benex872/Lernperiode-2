@@ -32,4 +32,12 @@ Heute habe ich an der Mathe hilfer weiter gearbeitet aber es leider nicht fertig
 - [x] Einen Englisch Vocy Trainer Programmieren.
 - [x] Einen Franz Vocy Trainer Programmieren.
 - [x] Einen Alphabetischen Zuordner der die Namen die der Benutzter eingegeben hat Alphabetisch Zuordnet.
+
+## 13.11.2026
+- [ ] Meinen Alphabetischen Zuordner verbessern damit er nicht bei ungültigen Eingaben abstürzt.
+- [ ] Meinen Englich vocy Trainer verbessern damit er nicht bei ungültigen Eingaben abstürzt.
+- [ ] Meinen Franz Vocy Trainer verbessern damit er nicht bei ungültigen Eingaben abstürzt.
+- [ ] 
+- [ ]
+
  
