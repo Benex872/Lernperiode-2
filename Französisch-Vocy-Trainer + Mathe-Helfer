@@ -1,0 +1,75 @@
+
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Random zufall = new Random();
+
+        while (true)
+        {
+            Console.WriteLine("\n1. Französisch Vokabeln");
+            Console.WriteLine("2. Mathe Aufgaben");
+            Console.WriteLine("3. Beenden");
+            Console.Write("Auswahl: ");
+            string wahl = Console.ReadLine();
+
+            if (wahl == "1")
+            {
+                string[] deutsch = { "Hallo", "Danke", "Katze", "Haus", "Buch" };
+                string[] franz = { "bonjour", "merci", "chat", "maison", "livre" };
+
+                int punkte = 0;
+
+                for (int i = 0; i < deutsch.Length; i++)
+                {
+                    Console.Write(deutsch[i] + " auf Französisch: ");
+                    string antwort = Console.ReadLine();
+
+                    if (antwort.Trim().ToLower() == franz[i])
+                    {
+                        Console.WriteLine("Richtig!");
+                        punkte++;
+                    }
+                    else
+                    {
+                        Console.WriteLine("Falsch! Richtig: " + franz[i]);
+                    }
+                }
+
+                Console.WriteLine("Punkte: " + punkte + "/5");
+            }
+            else if (wahl == "2")
+            {
+                int punkte = 0;
+
+                for (int i = 0; i < 5; i++)
+                {
+                    int a = zufall.Next(1, 21);
+                    int b = zufall.Next(1, 21);
+
+                    Console.Write(a + " + " + b + " = ");
+                    string eingabe = Console.ReadLine();
+
+                    if (int.TryParse(eingabe, out int antwort)
+                        && antwort == a + b)
+                    {
+                        Console.WriteLine("Richtig!");
+                        punkte++;
+                    }
+                    else
+                    {
+                        Console.WriteLine("Falsch! Ergebnis: " + (a + b));
+                    }
+                }
+
+                Console.WriteLine("Punkte: " + punkte + "/5");
+            }
+            else if (wahl == "3")
+            {
+                break;
+            }
+        }
+    }
+}
