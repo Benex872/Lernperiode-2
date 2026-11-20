@@ -1,0 +1,69 @@
+
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        while (true)
+        {
+            Console.WriteLine("\n1. Englisch Vokabeln");
+            Console.WriteLine("2. Mathe Helfer");
+            Console.WriteLine("3. Beenden");
+            Console.Write("Auswahl: ");
+            string wahl = Console.ReadLine();
+
+            if (wahl == "1")
+            {
+                string[] deutsch = { "Haus", "Apfel", "Hund", "Buch", "Schule" };
+                string[] englisch = { "house", "apple", "dog", "book", "school" };
+
+                int punkte = 0;
+
+                for (int i = 0; i < deutsch.Length; i++)
+                {
+                    Console.Write(deutsch[i] + " auf Englisch: ");
+                    string antwort = Console.ReadLine();
+
+                    if (antwort.Trim().ToLower() == englisch[i])
+                    {
+                        Console.WriteLine("Richtig!");
+                        punkte++;
+                    }
+                    else
+                    {
+                        Console.WriteLine("Falsch! Richtig: " + englisch[i]);
+                    }
+                }
+
+                Console.WriteLine("Punkte: " + punkte + "/5");
+            }
+            else if (wahl == "2")
+            {
+                Console.Write("Erste Zahl: ");
+                double a = Convert.ToDouble(Console.ReadLine());
+
+                Console.Write("Rechenzeichen (+, -, *, /): ");
+                string op = Console.ReadLine();
+
+                Console.Write("Zweite Zahl: ");
+                double b = Convert.ToDouble(Console.ReadLine());
+
+                if (op == "+")
+                    Console.WriteLine("Ergebnis: " + (a + b));
+                else if (op == "-")
+                    Console.WriteLine("Ergebnis: " + (a - b));
+                else if (op == "*")
+                    Console.WriteLine("Ergebnis: " + (a * b));
+                else if (op == "/" && b != 0)
+                    Console.WriteLine("Ergebnis: " + (a / b));
+                else
+                    Console.WriteLine("Ungültige Rechnung!");
+            }
+            else if (wahl == "3")
+            {
+                break;
+            }
+        }
+    }
+}
