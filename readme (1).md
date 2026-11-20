@@ -37,7 +37,15 @@ Heute habe ich an der Mathe hilfer weiter gearbeitet aber es leider nicht fertig
 - [x] Meinen Alphabetischen Zuordner verbessern damit er nicht bei ungültigen Eingaben abstürzt.
 - [x] Meinen English vocy Trainer verbessern damit er nicht bei ungültigen Eingaben abstürzt.
 - [x] Meinen Franz Vocy Trainer verbessern damit er nicht bei ungültigen Eingaben abstürzt.
-- [ ] Einen Programm schreiben das sowie ein Egnlish-Vocy trainer als auch ein Mathe Helfer sein kann.
-- [ ] Einen Programm schreiben das sowie ein Franz-Vocy Trainer als auch ein Mathe Helfer sein  kann.
+- [x] Einen Programm schreiben das sowie ein Egnlish-Vocy trainer als auch ein Mathe Helfer sein kann.
+- [x] Einen Programm schreiben das sowie ein Franz-Vocy Trainer als auch ein Mathe Helfer sein  kann.
 
 Heute habe ich meinen Alphabetischen Zuordner so verbessert das er nicht direkt abstürzt bei ungültigen Eingaben das Gleiche habe ich auch bei meinem English vocy und auch bei meinem Franz-vocy trainer diese werden ab jetzt nicht bei ungültigen eingaben abstürzten.
+
+## 20.11.2026
+- [x] Einen Stat Programm machen bei dem man die Stats von verschiedenen Spielern sehen kann.
+- [x] Denn Programm so verbessern damit man selber einen hinein fügen kann
+- [x] Denn Programm so verbessern damit er nicht crasht bei ungültigen Eingaben sonder,denn Benutzer wieder holft darauf hinweist das es eine ungültige eingabe ist
+- [x] Eine Spiel Funktion hinein bauen.
+- [x] denn Code noch so verbessern damit er bei der Gross und Klein Schreibung nicht abstürtzt.
+Heute habe ich dieses Programm fast fertig geschriebene jedoch hatte ich noch paar Probleme bei ein Paar eingaben weil ich sie nicht immer wieder raus ziehen konnte.
